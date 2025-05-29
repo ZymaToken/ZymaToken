@@ -20,10 +20,6 @@
       display: flex;
       flex-direction: column;
     }
-    img {
-      max-width: 100%;
-      height: auto;
-    }
     a:hover {
       color: #34d399;
     }
@@ -94,7 +90,7 @@
 <body class="flex flex-col min-h-screen">
 
   <!-- HEADER -->
-  <header class="py-10 text-center fade-in" style="animation-delay: 0.1s;">
+  <header class="py-10 text-center fade-in px-4" style="animation-delay: 0.1s;">
     <img src="logo.png" alt="ZYMA Logo" class="w-20 h-20 sm:w-24 sm:h-24 rounded-full shadow-lg mx-auto" />
     <h1 class="mt-6 text-3xl sm:text-5xl font-extrabold text-emerald-400 tracking-wide">ZYMA Token</h1>
     <p class="mt-2 max-w-xl mx-auto text-emerald-200 text-base sm:text-lg italic">
@@ -103,73 +99,75 @@
   </header>
 
   <!-- MAIN CONTENT -->
-  <main class="flex-grow max-w-4xl mx-auto px-4 sm:px-8 pb-16">
+  <main class="flex-grow w-full px-4 sm:px-8 pb-16">
+    <div class="max-w-4xl mx-auto w-full">
 
-    <!-- About -->
-    <section class="mb-16 fade-in text-center sm:text-left" style="animation-delay: 0.3s;">
-      <h2 class="text-2xl sm:text-3xl font-bold text-emerald-300 mb-4">About ZYMA Token</h2>
-      <p class="text-emerald-100 leading-relaxed text-base sm:text-lg">
-        ZYMA is more than just a token — it’s a commitment to our planet. Every transaction helps fund environmental projects worldwide, promoting clean energy, forest conservation, and sustainable innovation. Join a community that invests in a better tomorrow, while also benefiting from the growth potential of an eco-friendly digital asset.
-      </p>
-    </section>
+      <!-- About -->
+      <section class="mb-16 fade-in text-center sm:text-left" style="animation-delay: 0.3s;">
+        <h2 class="text-2xl sm:text-3xl font-bold text-emerald-300 mb-4">About ZYMA Token</h2>
+        <p class="text-emerald-100 leading-relaxed text-base sm:text-lg">
+          ZYMA is more than just a token — it’s a commitment to our planet. Every transaction helps fund environmental projects worldwide, promoting clean energy, forest conservation, and sustainable innovation. Join a community that invests in a better tomorrow, while also benefiting from the growth potential of an eco-friendly digital asset.
+        </p>
+      </section>
 
-    <!-- Buy Button -->
-    <div class="text-center fade-in" style="animation-delay: 0.5s;">
-      <a href="https://zymatoken.github.io/Buy/" rel="noopener" class="btn-primary mx-auto" aria-label="Buy ZYMA Token">
-        Buy ZYMA Token
-        <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
-      </a>
+      <!-- Buy Button -->
+      <div class="text-center fade-in" style="animation-delay: 0.5s;">
+        <a href="https://zymatoken.github.io/Buy/" rel="noopener" class="btn-primary mx-auto" aria-label="Buy ZYMA Token">
+          Buy ZYMA Token
+          <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+        </a>
+      </div>
+
+      <!-- Wallets -->
+      <section class="mb-16 fade-in" style="animation-delay: 0.7s;">
+        <h2 class="text-2xl sm:text-3xl font-bold text-emerald-300 mb-6 text-center">Download a Wallet</h2>
+        <p class="mb-6 max-w-xl mx-auto text-emerald-200 text-base sm:text-lg text-center">
+          To get started with ZYMA, you'll need a compatible crypto wallet. Here are some popular and trusted options:
+        </p>
+
+        <div class="flex flex-wrap justify-center gap-6 sm:gap-10">
+          <a href="https://metamask.io/download.html" rel="noopener" class="wallet-link text-center text-sm hover:text-emerald-400">
+            <img src="https://cdn.iconscout.com/icon/free/png-256/metamask-2728406-2261817.png" alt="MetaMask" />
+            <span class="mt-2 block">MetaMask</span>
+          </a>
+          <a href="https://trustwallet.com/" rel="noopener" class="wallet-link text-center text-sm hover:text-emerald-400">
+            <img src="https://trustwallet.com/assets/images/media/assets/TWT.png" alt="Trust Wallet" />
+            <span class="mt-2 block">Trust Wallet</span>
+          </a>
+          <a href="https://www.coinbase.com/wallet" rel="noopener" class="wallet-link text-center text-sm hover:text-emerald-400">
+            <img src="https://avatars.githubusercontent.com/u/18060234?s=200&v=4" alt="Coinbase Wallet" />
+            <span class="mt-2 block">Coinbase Wallet</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Add Token Instructions -->
+      <section class="section-container fade-in max-w-xl mx-auto" style="animation-delay: 0.9s;">
+        <h2 class="text-2xl sm:text-3xl font-bold text-emerald-300 mb-6 text-center">How to Add ZYMA Token to Your Wallet (Trust Wallet)</h2>
+        <div class="space-y-5 text-emerald-100 text-base sm:text-lg leading-relaxed">
+          <div class="flex items-start"><div class="step-circle">1</div><p>Open your Trust Wallet app.</p></div>
+          <div class="flex items-start"><div class="step-circle">2</div><p>Tap the <strong>“+”</strong> icon at the top right corner to add a new token.</p></div>
+          <div class="flex items-start"><div class="step-circle">3</div><p>Search for <strong>“ZYMA”</strong>. If not found, tap <strong>“Add Custom Token”</strong>.</p></div>
+          <div class="flex items-start"><div class="step-circle">4</div><p>Select the correct network (<strong>Binance Smart Chain - BSC</strong>).</p></div>
+          <div class="flex items-start"><div class="step-circle">5</div><p>Enter the contract address: <code>0x2E8F595EeEd5fb895eeD875251EdeFc2f47F40CA</code></p></div>
+          <div class="flex items-start"><div class="step-circle">6</div><p>Symbol (<strong>ZYM</strong>) and decimals (18) should auto-fill. Confirm and add.</p></div>
+          <div class="flex items-start"><div class="step-circle">7</div><p>Now you can view and manage your ZYMA tokens.</p></div>
+        </div>
+      </section>
+
+      <!-- Call to Action -->
+      <section class="text-center fade-in max-w-xl mx-auto mt-16" style="animation-delay: 1.1s;">
+        <h2 class="text-2xl sm:text-3xl font-bold text-emerald-300 mb-4">Ready to Support the Planet and Invest?</h2>
+        <p class="mb-8 text-emerald-200 text-base sm:text-lg">
+          Join thousands who believe in sustainable crypto investing. Buy ZYMA tokens easily through our secure partner platform.
+        </p>
+        <a href="https://zymatoken.github.io/Buy/" rel="noopener" class="btn-primary mx-auto" aria-label="Buy ZYMA Token">
+          Buy ZYMA Token
+          <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+        </a>
+      </section>
+
     </div>
-
-    <!-- Wallets -->
-    <section class="mb-16 fade-in" style="animation-delay: 0.7s;">
-      <h2 class="text-2xl sm:text-3xl font-bold text-emerald-300 mb-6 text-center">Download a Wallet</h2>
-      <p class="mb-6 max-w-xl mx-auto text-emerald-200 text-base sm:text-lg text-center">
-        To get started with ZYMA, you'll need a compatible crypto wallet. Here are some popular and trusted options:
-      </p>
-
-      <div class="flex flex-wrap justify-center gap-6 sm:gap-10">
-        <a href="https://metamask.io/download.html" rel="noopener" class="wallet-link text-center text-sm hover:text-emerald-400">
-          <img src="https://cdn.iconscout.com/icon/free/png-256/metamask-2728406-2261817.png" alt="MetaMask" />
-          <span class="mt-2 block">MetaMask</span>
-        </a>
-        <a href="https://trustwallet.com/" rel="noopener" class="wallet-link text-center text-sm hover:text-emerald-400">
-          <img src="https://trustwallet.com/assets/images/media/assets/TWT.png" alt="Trust Wallet" />
-          <span class="mt-2 block">Trust Wallet</span>
-        </a>
-        <a href="https://www.coinbase.com/wallet" rel="noopener" class="wallet-link text-center text-sm hover:text-emerald-400">
-          <img src="https://avatars.githubusercontent.com/u/18060234?s=200&v=4" alt="Coinbase Wallet" />
-          <span class="mt-2 block">Coinbase Wallet</span>
-        </a>
-      </div>
-    </section>
-
-    <!-- Add Token Instructions -->
-    <section class="section-container fade-in max-w-xl mx-auto" style="animation-delay: 0.9s;">
-      <h2 class="text-2xl sm:text-3xl font-bold text-emerald-300 mb-6 text-center">How to Add ZYMA Token to Your Wallet (Trust Wallet)</h2>
-      <div class="space-y-5 text-emerald-100 text-base sm:text-lg leading-relaxed">
-        <div class="flex items-start"><div class="step-circle">1</div><p>Open your Trust Wallet app.</p></div>
-        <div class="flex items-start"><div class="step-circle">2</div><p>Tap the <strong>“+”</strong> icon at the top right corner to add a new token.</p></div>
-        <div class="flex items-start"><div class="step-circle">3</div><p>Search for <strong>“ZYMA”</strong>. If not found, tap <strong>“Add Custom Token”</strong>.</p></div>
-        <div class="flex items-start"><div class="step-circle">4</div><p>Select the correct network (<strong>Binance Smart Chain - BSC</strong>).</p></div>
-        <div class="flex items-start"><div class="step-circle">5</div><p>Enter the contract address: <code>0x2E8F595EeEd5fb895eeD875251EdeFc2f47F40CA</code></p></div>
-        <div class="flex items-start"><div class="step-circle">6</div><p>Symbol (<strong>ZYM</strong>) and decimals (18) should auto-fill. Confirm and add.</p></div>
-        <div class="flex items-start"><div class="step-circle">7</div><p>Now you can view and manage your ZYMA tokens.</p></div>
-      </div>
-    </section>
-
-    <!-- Call to Action -->
-    <section class="text-center fade-in max-w-xl mx-auto mt-16" style="animation-delay: 1.1s;">
-      <h2 class="text-2xl sm:text-3xl font-bold text-emerald-300 mb-4">Ready to Support the Planet and Invest?</h2>
-      <p class="mb-8 text-emerald-200 text-base sm:text-lg">
-        Join thousands who believe in sustainable crypto investing. Buy ZYMA tokens easily through our secure partner platform.
-      </p>
-      <a href="https://zymatoken.github.io/Buy/" rel="noopener" class="btn-primary mx-auto" aria-label="Buy ZYMA Token">
-        Buy ZYMA Token
-        <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
-      </a>
-    </section>
-
   </main>
 
   <!-- Footer -->
